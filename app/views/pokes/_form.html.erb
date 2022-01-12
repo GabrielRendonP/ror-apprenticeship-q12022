@@ -1,0 +1,22 @@
+<%= form_with(model: poke) do |form| %>
+  <% if poke.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poke.errors.count, "error") %> prohibited this poke from being saved:</h2>
+
+      <ul>
+        <% poke.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

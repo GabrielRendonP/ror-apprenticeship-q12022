@@ -14,3 +14,118 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 25ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 3121)
 
 
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePokes (20220112223845)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "pokes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220112223845"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-12 22:39:00.833658"], ["updated_at", "2022-01-12 22:39:00.833658"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-01-12 16:39:13 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gabriel.rendon/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gabriel.rendon/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.2ms | Allocations: 460)
+Completed 200 OK in 34ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 3433)
+
+
+Started GET "/" for ::1 at 2022-01-12 16:39:19 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gabriel.rendon/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gabriel.rendon/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 571)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 1651)
+
+
+Started GET "/" for ::1 at 2022-01-12 16:39:40 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gabriel.rendon/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gabriel.rendon/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 50)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 406)
+
+
+Started GET "/" for ::1 at 2022-01-12 16:39:46 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gabriel.rendon/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gabriel.rendon/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 50)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started GET "/pokes" for ::1 at 2022-01-12 16:39:57 -0600
+Processing by PokesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pokes/index.html.erb within layouts/application
+  [1m[36mPoke Load (9.4ms)[0m  [1m[34mSELECT "pokes".* FROM "pokes"[0m
+  ↳ app/views/pokes/index.html.erb:14
+  Rendered pokes/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 1372)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/gabriel.rendon/ror-apprenticeship-q12022/public/packs
+[Webpacker] Hash: 2034dd941d5476d8645c
+Version: webpack 4.46.0
+Time: 1387ms
+Built at: 01/12/2022 4:40:01 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3dd0dc24d9c39bc09227.js    125 KiB  application  [emitted] [immutable]  application
+js/application-3dd0dc24d9c39bc09227.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3dd0dc24d9c39bc09227.js js/application-3dd0dc24d9c39bc09227.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3706.3ms | Allocations: 19024)
+Completed 200 OK in 3741ms (Views: 3706.0ms | ActiveRecord: 9.4ms | Allocations: 20979)
+
+
+Started GET "/pokes/new" for ::1 at 2022-01-12 16:42:49 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PokesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pokes/new.html.erb within layouts/application
+  Rendered pokes/_form.html.erb (Duration: 24.8ms | Allocations: 4479)
+  Rendered pokes/new.html.erb within layouts/application (Duration: 28.0ms | Allocations: 5125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 11584)
+Completed 200 OK in 83ms (Views: 49.4ms | ActiveRecord: 0.6ms | Allocations: 18236)
+
+
+Started POST "/pokes" for ::1 at 2022-01-12 16:42:54 -0600
+Processing by PokesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "poke"=>{"name"=>"pika"}, "commit"=>"Create Poke"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pokes_controller.rb:27:in `block in create'
+  [1m[36mPoke Create (0.9ms)[0m  [1m[32mINSERT INTO "pokes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "pika"], ["created_at", "2022-01-12 22:42:54.185915"], ["updated_at", "2022-01-12 22:42:54.185915"]]
+  ↳ app/controllers/pokes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pokes_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pokes/1
+Completed 302 Found in 32ms (ActiveRecord: 2.7ms | Allocations: 3611)
+
+
+Started GET "/pokes/1" for ::1 at 2022-01-12 16:42:54 -0600
+Processing by PokesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoke Load (0.2ms)[0m  [1m[34mSELECT "pokes".* FROM "pokes" WHERE "pokes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pokes_controller.rb:63:in `set_poke'
+  Rendering layout layouts/application.html.erb
+  Rendering pokes/show.html.erb within layouts/application
+  Rendered pokes/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3858)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 5801)
+
+
