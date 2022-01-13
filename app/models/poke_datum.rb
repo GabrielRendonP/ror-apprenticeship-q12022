@@ -1,0 +1,2 @@
+class PokeDatum < ApplicationRecord
+end

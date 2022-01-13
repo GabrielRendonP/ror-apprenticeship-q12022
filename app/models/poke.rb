@@ -1,2 +1,0 @@
-class Poke < ApplicationRecord
-end

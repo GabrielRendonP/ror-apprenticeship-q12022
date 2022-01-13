@@ -1,5 +1,5 @@
 class AbilitiesController < ApplicationController
-  before_action :set_ability, only: %i[ show edit update destroy ]
+  before_action :set_ability, only: %i[show edit update destroy]
 
   # GET /abilities or /abilities.json
   def index
@@ -7,8 +7,7 @@ class AbilitiesController < ApplicationController
   end
 
   # GET /abilities/1 or /abilities/1.json
-  def show
-  end
+  def show; end
 
   # GET /abilities/new
   def new
@@ -16,7 +15,13 @@ class AbilitiesController < ApplicationController
   end
 
   # GET /abilities/1/edit
-  def edit
+  def edit; end
+
+  def link_ability
+    pokemon = Pokemon.find_by(id: params[:id])
+    ability = Ability.find_by(name: params[:name])
+    pokemon.abilities << ability
+    redirect_to root_path
   end
 
   # POST /abilities or /abilities.json
@@ -25,7 +30,7 @@ class AbilitiesController < ApplicationController
 
     respond_to do |format|
       if @ability.save
-        format.html { redirect_to ability_url(@ability), notice: "Ability was successfully created." }
+        format.html { redirect_to ability_url(@ability), notice: 'Ability was successfully created.' }
         format.json { render :show, status: :created, location: @ability }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +43,7 @@ class AbilitiesController < ApplicationController
   def update
     respond_to do |format|
       if @ability.update(ability_params)
-        format.html { redirect_to ability_url(@ability), notice: "Ability was successfully updated." }
+        format.html { redirect_to ability_url(@ability), notice: 'Ability was successfully updated.' }
         format.json { render :show, status: :ok, location: @ability }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +57,20 @@ class AbilitiesController < ApplicationController
     @ability.destroy
 
     respond_to do |format|
-      format.html { redirect_to abilities_url, notice: "Ability was successfully destroyed." }
+      format.html { redirect_to abilities_url, notice: 'Ability was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_ability
-      @ability = Ability.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def ability_params
-      params.require(:ability).permit(:name, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_ability
+    @ability = Ability.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def ability_params
+    params.require(:ability).permit(:name, :description)
+  end
 end

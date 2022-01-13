@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @poke_datum.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @poke_datum.picture %>
+</p>
+
+<%= link_to 'Edit', edit_poke_datum_path(@poke_datum) %> |
+<%= link_to 'Back', poke_data_path %>

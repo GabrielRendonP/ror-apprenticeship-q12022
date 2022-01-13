@@ -1,5 +1,8 @@
 require_relative 'task_helpers'
-task :testing do
-  puts 'helo i am a task'
-  TaskHeklpers.fetch_pokes
+
+task testing: :environment do
+  poke_list = TaskHeklpers.fetch_pokes
+  abilities_list = TaskHeklpers.fetch_abilities
+  PokeDatum.create!(poke_list)
+  Ability.create!(abilities_list)
 end

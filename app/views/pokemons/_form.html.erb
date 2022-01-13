@@ -13,17 +13,12 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.text_field :picture %>
+    <%= form.collection_select :name, PokeDatum.all, :name, :name, propmt: true %>
   </div>
 
   <div class="field">
     <%= form.label :trainer_id %>
-    <%= form.text_field :trainer_id %>
+    <%= form.collection_select :trainer_id, Trainer.all, :id, :name, propmt: true %>
   </div>
 
   <div class="actions">

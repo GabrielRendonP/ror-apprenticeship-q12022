@@ -1,0 +1,2 @@
+module PokeDataHelper
+end

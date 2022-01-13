@@ -10,5 +10,15 @@
   <%= @trainer.picture %>
 </p>
 
+<div>
+  <% @trainer.pokemons.each do |poke| %>
+    <div>
+      <%= poke.name %>
+      <%= image_tag poke.picture %>
+    </div>
+  <% end %>
+<div>
+
+<%= link_to 'Add new pokemon', new_pokemon_path %>
 <%= link_to 'Edit', edit_trainer_path(@trainer) %> |
 <%= link_to 'Back', trainers_path %>
