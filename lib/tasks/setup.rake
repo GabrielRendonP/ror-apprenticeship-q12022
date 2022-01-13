@@ -1,4 +1,4 @@
-require_relative 'task_helpers'
+require_relative 'helpers/task_helpers'
 
 task testing: :environment do
   poke_list = TaskHeklpers.fetch_pokes
