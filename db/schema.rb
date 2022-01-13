@@ -39,6 +39,12 @@ ActiveRecord::Schema.define(version: 2022_01_13_134436) do
 
   create_table "poke_types", force: :cascade do |t|
     t.string "name"
+    t.string "double_damage_from", array: true
+    t.string "double_damage_to", array: true
+    t.string "half_damage_from", array: true
+    t.string "half_damage_to", array: true
+    t.string "no_damage_from", array: true
+    t.string "no_damage_to", array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
