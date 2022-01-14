@@ -12,10 +12,7 @@
 
 <div>
   <% @trainer.pokemons.each do |poke| %>
-    <div>
-      <%= poke.name %>
-      <%= image_tag poke.picture %>
-    </div>
+    <%= render "shared/pokemon
   <% end %>
 <div>
 

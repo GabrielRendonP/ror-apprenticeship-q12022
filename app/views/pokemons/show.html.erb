@@ -18,14 +18,14 @@
 <%= link_to 'Back', pokemons_path %>
 
 
-<div> 
-<h2> Abilities </h2>
+<div>
+  <h2> Abilities </h2>
 </div>
 
 <div>
-<% @pokemon.abilities.each do |ability| %>
-<%= ability.name %>
-<% end %>
+  <% @pokemon.abilities.each do |ability| %>
+    <%= ability.name %>
+  <% end %>
 </div>
 
 <%= form_with url: add_ability_path, method: :get do |form| %>
@@ -35,10 +35,30 @@
   </div>
 
   <div class="field">
-    <%= form.hidden_field :id, value: @pokemon.id %>
+    <%= form.hidden_field :poke_id, value: @pokemon.id %>
   </div>
 
   <div class="actions">
     <%= form.submit 'Add new ability' %>
+  </div>
+<% end %>
+
+<div>
+  <h2> Type </h2>
+</div>
+
+<%= form_with url: add_type_path, method: :get do |form| %>
+
+  <div class="field">
+    <%= form.label :poke_type %>
+    <%= form.collection_select :name, PokeType.all, :name, :name, propmt: true %>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :poke_id, value: @pokemon.id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Add new type' %>
   </div>
 <% end %>
